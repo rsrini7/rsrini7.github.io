@@ -83,47 +83,52 @@
      ex: exec ls -l (it will close current shell)
 </code></pre>
 <h3 id="suspend--restore-the-running-process">Suspend &amp; Restore the running process</h3>
-<pre><code>Suspend the curr running process in forground : ctrl + z (equalent to below command)
-Note: kill -20 means SUGTSTP
+<pre><code>Suspend the current running process in foreground : ctrl + z (equivalent to below command)
+Note: kill -20 means SUGTSTP and Stopped state
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -20 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
-</code></pre></div><pre><code>To get process with hierarche:  
+</code></pre></div><pre><code>To get process with hierarchy:  
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps f 
 </code></pre></div><pre><code>Column: STAT values::: 
   T -&gt; suspended state 
   S -&gt; Running state 
-To see running jobs : 
+</code></pre>
+<p>Jobs</p>
+<pre><code>To see running jobs
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jobs
-</code></pre></div><pre><code>To restore the suspended process as forground : 
+</code></pre></div><pre><code>To restore the suspended process as foreground : 
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fg <span style="color:#75715e">#it resume on current process, if only one job</span>
 </code></pre></div><pre><code>To restore the suspended process as background : 
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bg <span style="color:#75715e">#it resume on current process, if only one job</span>
-</code></pre></div><pre><code>multiple jobs running in background and to bring frontground :
+</code></pre></div><pre><code>Multiple jobs running in background and to bring foreground :
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fg %<span style="color:#f92672">{</span>job_number<span style="color:#f92672">}</span> <span style="color:#75715e">#jobs command will give job_number</span>
 </code></pre></div><pre><code>Note: jobs shows + and - after job number.
-  it denotes, + means last job sent to bg and - means last to previous job sent to bg.
-  fg / bg : equalent to kill -18 [pid] . it means SIGCONT
+  '+' means last job sent to bg
+  '-' means last to previous job sent to bg
+  fg / bg : equivalent to kill -18 [pid] . '-18' means SIGCONT
 </code></pre>
 <h3 id="kill">Kill</h3>
 <pre><code>List of kill signals:
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -l
 </code></pre></div><p>Kill Processes:</p>
-<pre><code>sends sigterm: 
+<pre><code>sends sigterm: Terminated state in jobs queue
+Gradual shutdown
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -15 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>  <span style="color:#75715e">#default - witout number same</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -15 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>  <span style="color:#75715e">#default - without number also same</span>
 </code></pre></div><pre><code>sends sigint : 
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -2 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
 </code></pre></div><pre><code>sends sighup : 
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -1 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
-</code></pre></div><pre><code>sends sigkill : 
+</code></pre></div><pre><code>sends sigkill : force kill
+Abrupt shutdown
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -9 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
 </code></pre></div>
