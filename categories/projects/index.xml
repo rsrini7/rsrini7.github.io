@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Srini</title>
-    <link>https://rsrini7.github.io/categories/</link>
-    <description>Recent content in Categories on Srini</description>
+    <title>projects on Srini</title>
+    <link>https://rsrini7.github.io/categories/projects/</link>
+    <description>Recent content in projects on Srini</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
     
-	<atom:link href="https://rsrini7.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rsrini7.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>projects</title>
-      <link>https://rsrini7.github.io/categories/projects/</link>
+      <title>Projects</title>
+      <link>https://rsrini7.github.io/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://rsrini7.github.io/categories/projects/</guid>
+      <guid>https://rsrini7.github.io/projects/</guid>
       <description></description>
     </item>
     

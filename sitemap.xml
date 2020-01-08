@@ -3,26 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rsrini7.github.io/talks/everyday-cryptography/</loc>
-    <lastmod>2018-11-17T19:17:42+05:30</lastmod>
+    <loc>https://rsrini7.github.io/blog/</loc>
+    <lastmod>2020-01-07T15:37:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/tags/cli/</loc>
+    <lastmod>2020-01-07T15:37:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/tags/linux/</loc>
+    <lastmod>2020-01-07T15:37:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/blog/linux-commands-1/</loc>
+    <lastmod>2020-01-07T15:37:58+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://rsrini7.github.io/</loc>
-    <lastmod>2018-11-17T19:17:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rsrini7.github.io/talks/</loc>
-    <lastmod>2018-11-17T19:17:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rsrini7.github.io/categories/</loc>
+    <lastmod>2020-01-07T15:37:58+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://rsrini7.github.io/tags/</loc>
+    <lastmod>2020-01-07T15:37:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/categories/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/tags/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rsrini7.github.io/categories/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
 </urlset>

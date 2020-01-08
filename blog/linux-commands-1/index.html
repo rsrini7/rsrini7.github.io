@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Srini" />
+    <meta name="description" content="A site for me">
+    <link rel="shortcut icon" type="image/x-icon" href="https://rsrini7.github.io/img/favicon.ico">
+    <title>Linux Commands 1</title>
+    <meta name="generator" content="Hugo 0.62.2" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://rsrini7.github.io/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://rsrini7.github.io/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/resume/srinivasan_ragothaman_resume.pdf">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://rsrini7.github.io/blog/linux-commands-1/">Linux Commands 1</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          January 7, 2020
+            &nbsp;&nbsp;
+            
+            <span class="label label-success">linux</span>
+            
+            <span class="label label-success">cli</span>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              <h2 id="linux-commands">Linux Commands</h2>
+<h3 id="get-init-process">Get Init Process</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps -f <span style="color:#ae81ff">1</span>
+</code></pre></div><h3 id="fork--exec">Fork &amp; Exec</h3>
+<pre><code>parent (ex: bash) -&gt; child (ex ls -l) 
+     ls -l command from bash forks the new process and executing using &quot;exec&quot;
+     parent returns back once child finishes its work (exec ends once the process completes)
+     ex: exec ls -l (it will close current shell)
+</code></pre>
+<h3 id="suspend--restore-the-running-process">Suspend &amp; Restore the running process</h3>
+<pre><code>Suspend the curr running process in forground : ctrl + z (equalent to below command)
+Note: kill -20 means SUGTSTP
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -20 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
+</code></pre></div><pre><code>To get process with hierarche:  
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps f 
+</code></pre></div><pre><code>Column: STAT values::: 
+  T -&gt; suspended state 
+  S -&gt; Running state 
+To see running jobs : 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jobs
+</code></pre></div><pre><code>To restore the suspended process as forground : 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fg <span style="color:#75715e">#it resume on current process, if only one job</span>
+</code></pre></div><pre><code>To restore the suspended process as background : 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bg <span style="color:#75715e">#it resume on current process, if only one job</span>
+</code></pre></div><pre><code>multiple jobs running in background and to bring frontground :
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fg %<span style="color:#f92672">{</span>job_number<span style="color:#f92672">}</span> <span style="color:#75715e">#jobs command will give job_number</span>
+</code></pre></div><pre><code>Note: jobs shows + and - after job number.
+  it denotes, + means last job sent to bg and - means last to previous job sent to bg.
+  fg / bg : equalent to kill -18 [pid] . it means SIGCONT
+</code></pre>
+<h3 id="kill">Kill</h3>
+<pre><code>List of kill signals:
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -l
+</code></pre></div><p>Kill Processes:</p>
+<pre><code>sends sigterm: 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -15 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>  <span style="color:#75715e">#default - witout number same</span>
+</code></pre></div><pre><code>sends sigint : 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -2 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
+</code></pre></div><pre><code>sends sighup : 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -1 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
+</code></pre></div><pre><code>sends sigkill : 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kill -9 <span style="color:#f92672">[</span>pid<span style="color:#f92672">]</span>
+</code></pre></div>
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = 'rsrini7-1';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://rsrini7.github.io/js/docs.min.js"></script>
+<script src="https://rsrini7.github.io/js/main.js"></script>
+
+<script src="https://rsrini7.github.io/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>

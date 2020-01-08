@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Srini</title>
-    <link>https://rsrini7.github.io/</link>
-    <description>Recent content on Srini</description>
+    <title>linux on Srini</title>
+    <link>https://rsrini7.github.io/tags/linux/</link>
+    <description>Recent content in linux on Srini</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 07 Jan 2020 15:37:58 +0100</lastBuildDate>
     
-	<atom:link href="https://rsrini7.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rsrini7.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://rsrini7.github.io/blog/linux-commands-1/</guid>
       <description>Linux Commands Get Init Process ps -f 1 Fork &amp;amp; Exec parent (ex: bash) -&amp;gt; child (ex ls -l) ls -l command from bash forks the new process and executing using &amp;quot;exec&amp;quot; parent returns back once child finishes its work (exec ends once the process completes) ex: exec ls -l (it will close current shell)  Suspend &amp;amp; Restore the running process Suspend the curr running process in forground : ctrl + z (equalent to below command) Note: kill -20 means SUGTSTP  kill -20 [pid] To get process with hierarche:  ps f Column: STAT values::: T -&amp;gt; suspended state S -&amp;gt; Running state To see running jobs :  jobs To restore the suspended process as forground :  fg #it resume on current process, if only one job To restore the suspended process as background :  bg #it resume on current process, if only one job multiple jobs running in background and to bring frontground :  fg %{job_number} #jobs command will give job_number Note: jobs shows + and - after job number.</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://rsrini7.github.io/projects/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://rsrini7.github.io/projects/</guid>
-      <description></description>
     </item>
     
   </channel>
